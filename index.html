@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — 55 PS5 trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap to the platinum, missable flags, spoiler mode, export and import.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">GRAND THEFT AUTO VI &middot; PLAYSTATION 5 &middot; LAUNCHED 19 NOV 2026</p>
+    <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+    <p class="lede">All 55 official trophies with a guide for each, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline.</p>
+    <div class="progress-wrap" aria-label="Progress">
+      <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <div class="grade-counts" id="gradeCounts"></div>
+    </div>
+  </div>
+</header>
+
+<div class="alert" id="missableAlert" role="note">
+  <strong>&#9888; 1 missable trophy:</strong>
+  <span><b>Positive Mental Attitude</b> — the Chapter 1 balcony meditation is gone after Chapter 1. Keep a manual save at the start of every chapter: no mission replay.</span>
+  <button type="button" id="showMissable">Show it</button>
+</div>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" id="tabChecklist" class="tab active">Checklist</button>
+  <button type="button" id="tabRoadmap" class="tab">Roadmap to the Platinum</button>
+</nav>
+
+<section id="checklistView">
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search trophies, missions, activities&hellip;" aria-label="Search trophies">
+    <div class="filters" id="filters" role="group" aria-label="Filter by kind">
+      <button type="button" data-filter="all" class="chip active">All 55</button>
+      <button type="button" data-filter="story" class="chip">Story</button>
+      <button type="button" data-filter="missable" class="chip">Missable</button>
+      <button type="button" data-filter="collectibles" class="chip">Collectibles</button>
+      <button type="button" data-filter="activities" class="chip">Activities</button>
+      <button type="button" data-filter="online" class="chip">Online</button>
+    </div>
+    <label class="spoiler-toggle"><input type="checkbox" id="spoiler"> Hide story spoilers</label>
+    <div class="io">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    </div>
+  </div>
+
+  <p class="count-line" id="countLine"></p>
+
+  <div class="layout">
+    <main>
+      <ul id="trophyList" class="trophy-list"></ul>
+      <p id="emptyState" class="empty" hidden></p>
+    </main>
+    <aside id="detail" class="detail" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="roadmapView" hidden>
+  <p class="roadmap-intro">One playthrough, in order. The story is five chapters (about 60&ndash;80 hours); the platinum takes around 200 hours in total. There is no mission replay and no New Game Plus, so the saves in Stage 1 matter more than anything else. Free-roam continues after the final mission, so almost everything can be cleaned up afterwards — except the one missable meditation.</p>
+  <ol id="roadmapStages" class="roadmap"></ol>
+</section>
+
+<footer>
+  <p><strong>Honesty note.</strong> The game launched on 19 November 2026, days ago. Steps confirmed by Rockstar or by the trophy list itself are stated plainly; anything the community has not yet pinned down is marked <b>Unconfirmed</b> in the guide. Trophy names, descriptions and grades are the official ones (Exophase / PSNProfiles, cross-checked); every guide is written for this entry in its own words and cites its sources beside it.</p>
+  <p>Sources: the official trophy list via <a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6</a> (Exophase / PSNProfiles), <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx</a>, <a href="https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap">Push Square</a>, <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag</a>, <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer</a>, <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase</a> and <a href="https://gtaclub.net/gta-6-activities-and-side-content/">GTA Club</a>. No Rockstar artwork or logo is used; the look is original. This guide makes no network requests and works offline.</p>
+  <p>Share a view: add <code>?filter=missable</code>, <code>?spoiler=1</code>, <code>?open=28</code>, <code>?earned=2,3,8</code> or <code>?view=roadmap</code> to the address.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
